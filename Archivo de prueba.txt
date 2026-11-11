@@ -1,0 +1,23 @@
+version 2
+
+Configuración rápida : si ya has hecho algo así antes.
+o
+
+HTTPS
+
+SSH
+https://github.com/jprochaix/ARCHIVOS-JP.git
+Para empezar, crea un archivo nuevo o sube uno existente . Recomendamos que cada repositorio incluya un archivo README , un archivo LICENSE y un archivo .gitignore .
+
+…o crear un nuevo repositorio en la línea de comandos
+echo "# ARCHIVOS-JP" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/jprochaix/ARCHIVOS-JP.git
+git push -u origin main
+…o bien, actualiza un repositorio existente desde la línea de comandos.
+git remote add origin https://github.com/jprochaix/ARCHIVOS-JP.git
+git branch -M main
+git push -u origin main
