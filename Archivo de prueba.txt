@@ -1,4 +1,4 @@
-version 5
+version 6
 
 Configuración rápida : si ya has hecho algo así antes.
 
@@ -15,4 +15,10 @@ git push -u origin main
 O bien, actualiza un repositorio existente desde la línea de comandos.
 git remote add origin https://github.com/jprochaix/ARCHIVOS-JP.git
 git branch -M main
+git push -u origin main
+
+
+Si hago cambios
+git add .
+git commit -m "Hice un cambio"
 git push -u origin main
