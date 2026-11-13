@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es-AR" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumar</title>
+    <style>
+        :root {
+            --radius: .625rem;
+            --background: oklch(100% 0 0);
+            --foreground: oklch(14.5% 0 0);
+            --card: oklch(99.107% .00011 271.152);
+            --card-foreground: oklch(14.5% 0 0);
+            --primary: oklch(50% .095 252);
+            --primary-foreground: oklch(96% .02 260.5);
+            --muted-foreground: oklch(55.6% 0 0);
+            --border: oklch(92.2% 0 0);
+            --input: oklch(86% .0055 17.26);
+            --ring: oklch(70.8% 0 0);
+        }
+
+        .dark {
+            --background: oklch(14.5% 0 0);
+            --foreground: oklch(98.5% 0 0);
+            --card: oklch(20.5% 0 0);
+            --card-foreground: oklch(98.5% 0 0);
+            --primary: oklch(50% .095 252);
+            --primary-foreground: oklch(96% .02 260.5);
+            --muted-foreground: oklch(80.405% .03486 259.452);
+            --border: oklch(100% 0 0 / .1);
+            --input: oklch(100% 0 0 / .15);
+            --ring: oklch(55.6% 0 0);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; }
+
+        html {
+            font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            background-color: var(--background);
+            color: var(--foreground);
+            font-size: 1rem;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 24rem;
+            padding: 1.5rem;
+            background-color: var(--card);
+            color: var(--card-foreground);
+            border: 1px solid var(--border);
+            border-radius: calc(var(--radius) + 4px);
+            box-shadow: 0 1px 3px rgb(0 0 0 / .1), 0 1px 2px rgb(0 0 0 / .1);
+        }
+
+        .card h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.33;
+            margin-bottom: 1.5rem;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            font-size: .875rem;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        input {
+            height: 2.25rem;
+            width: 100%;
+            padding: .25rem .75rem;
+            font: inherit;
+            font-size: .875rem;
+            color: inherit;
+            background-color: transparent;
+            border: 1px solid var(--input);
+            border-radius: calc(var(--radius) - 2px);
+            box-shadow: 0 1px 2px rgb(0 0 0 / .05);
+            outline: none;
+            transition: border-color .15s, box-shadow .15s;
+        }
+
+        input:focus-visible {
+            border-color: var(--ring);
+            box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent);
+        }
+
+        button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 2.25rem;
+            margin-top: .5rem;
+            padding: .5rem 1rem;
+            font: inherit;
+            font-size: .875rem;
+            font-weight: 500;
+            color: var(--primary-foreground);
+            background-color: var(--primary);
+            border: 0;
+            border-radius: calc(var(--radius) - 2px);
+            cursor: pointer;
+            box-shadow: 0 1px 2px rgb(0 0 0 / .05);
+            transition: background-color .15s, box-shadow .15s;
+        }
+
+        button:hover { background-color: color-mix(in oklch, var(--primary) 90%, transparent); }
+
+        button:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent);
+        }
+    </style>
+</head>
+<body>
+    <form class="card" action="#" method="post">
+        <h1>Sumar</h1>
+
+        <div class="field">
+            <label for="numero1">Numero 1</label>
+            <input type="number" id="numero1" name="numero1" step="any" required />
+        </div>
+
+        <div class="field">
+            <label for="numero2">Numero 2</label>
+            <input type="number" id="numero2" name="numero2" step="any" required />
+        </div>
+
+        <button type="submit">Sumar</button>
+    </form>
+</body>
+</html>
