@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora con funciones</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>Calculadora con funciones</h1>
+
+  <form id="formulario">
+    <label>Número 1:
+      <input type="number" id="numero1" step="any">
+    </label>
+    <br><br>
+
+    <label>Número 2:
+      <input type="number" id="numero2" step="any">
+    </label>
+    <br><br>
+
+    <label>Operación:
+      <select id="operacion">
+        <option value="sumar">Sumar (+)</option>
+        <option value="restar">Restar (-)</option>
+        <option value="multiplicar">Multiplicar (*)</option>
+        <option value="dividir">Dividir (/)</option>
+      </select>
+    </label>
+    <br><br>
+
+    <button type="submit">Calcular</button>
+  </form>
+
+
+
+  <h2 id="resultado"></h2>
+
+  <script src="calculadora_func.js"></script>
+</body>
+</html>
