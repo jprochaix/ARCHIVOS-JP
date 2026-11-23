@@ -1,0 +1,4 @@
+Necesito crear un archivo html  y un js usando el estilos.css de clase 4.  Debe contener un campo para cargar las Tareas, un botón para Guardar dichas tareas, y una lista de dichas tareas (tipo arrays, llamada Lista de tareas). Cuando hago click en el boton guardar debe agregar a la tarea ingresa a Lista de Tareas. Ademas cada items de Lista de Tareas debe poder Eliminarse y/o Modificarse
+
+
+Me olvidede decirte que esos 2 archivos tareas.html y tareas.js se guarden en la carpeta Clase 5. y Ademas que Lista de Tareas tenga la posibilidad de que cada item de la lista pueda moverse hacia arriba o hacia abajo

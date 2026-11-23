@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de tareas</title>
+  <link rel="stylesheet" href="../Clase 4/estilos.css">
+  <style>
+    /* Ajustes locales para la lista (estilos.css no se modifica) */
+    #listaTareas { list-style: none; padding: 0; margin: 20px 0 0; }
+    #listaTareas li {
+      background-color: white;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #listaTareas li span { flex: 1; word-break: break-word; }
+    #listaTareas li input { margin-top: 0; }
+    #listaTareas li button { width: auto; padding: 6px 10px; font-size: 14px; }
+    #listaTareas li button.eliminar { background-color: #e74c3c; }
+    #listaTareas li button.eliminar:hover { background-color: #c0392b; }
+    #listaTareas li button:disabled { background-color: #bdc3c7; cursor: default; }
+    h2 { color: #2c3e50; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Tareas</h1>
+
+  <form id="formTarea">
+    <label for="tarea">Nueva tarea</label>
+    <input type="text" id="tarea" placeholder="Escribí una tarea" autocomplete="off">
+    <br><br>
+    <button type="submit">Guardar</button>
+  </form>
+
+  <h2>Lista de tareas</h2>
+  <ul id="listaTareas"></ul>
+
+  <script src="tareas.js"></script>
+</body>
+</html>
