@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tareas del Area Sistemas Córdoba</title>
+<link rel="stylesheet" href="../Clase%204/estilos.css">
+<style>
+  /* Ajustes propios de esta página sobre estilos.css de la Clase 4 */
+  body { max-width: 900px; }
+  .fila { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 10px; align-items: flex-end; }
+  .fila label { flex: 1; min-width: 150px; }
+  .fila label.ancho { flex: 4; }
+  .fila label.angosto { flex: 1; min-width: 120px; }
+  input:disabled { background: #e6e6e6; cursor: not-allowed; }
+  td input, td select { margin-top: 0; }
+  .fila button { width: auto; padding: 10px 20px; }
+  form { margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; }
+  th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+  th { background: #ddd; }
+  .Finalizada { background: #90ee90; }
+  .Rechazada { background: #ff7f7f; }
+  .Pendiente { background: #fff176; }
+  .Inicial { background: #87ceeb; }
+  button.icono { width: auto; background: none; font-size: 20px; padding: 2px 6px; }
+  button.icono:hover { background: rgba(0,0,0,0.1); }
+  #contador { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 15px; }
+  .chip { padding: 8px 14px; border-radius: 16px; font-weight: bold; color: #2c3e50; }
+  td.acciones { white-space: nowrap; }
+</style>
+</head>
+<body>
+  <h1>Tareas del Area Sistemas Córdoba</h1>
+
+  <form id="formTarea">
+    <div class="fila">
+      <label class="ancho">Tarea
+        <input type="text" id="nombre" required>
+      </label>
+      <label class="angosto">Estado
+        <select id="estado">
+          <option>Inicial</option>
+          <option>Pendiente</option>
+          <option>Finalizada</option>
+          <option>Rechazada</option>
+        </select>
+      </label>
+    </div>
+    <div class="fila">
+      <label>Solicitante
+        <select id="solicitante">
+          <option>Juan Pablo</option>
+          <option>Lionel</option>
+          <option>Leonardo</option>
+        </select>
+      </label>
+      <label>Fecha de pedido
+        <input type="date" id="fechaPedido">
+      </label>
+      <label>Fecha de finalización
+        <input type="date" id="fechaFin">
+      </label>
+      <button type="submit">Guardar</button>
+    </div>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tarea</th><th>Estado</th><th>Solicitante</th>
+        <th>Fecha de pedido</th><th>Fecha de finalización</th><th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="listaTareas"></tbody>
+  </table>
+
+  <div id="contador"></div>
+
+  <script src="objeto.js"></script>
+</body>
+</html>
