@@ -2,7 +2,7 @@ const tareas = [];
 let editando = null; // índice de la tarea en edición
 
 const ESTADOS = ["Inicial", "Pendiente", "Finalizada", "Rechazada"];
-const SOLICITANTES = ["Juan Pablo", "Lionel", "Leonardo"];
+const SOLICITANTES = ["Juan Pablo Rochaix", "Lionel", "Leonardo"];
 
 const form = document.getElementById("formTarea");
 const lista = document.getElementById("listaTareas");
